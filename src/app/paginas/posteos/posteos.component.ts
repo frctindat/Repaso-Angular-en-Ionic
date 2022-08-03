@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DatosService } from 'src/app/servicios/datos.service';
 
 @Component({
   selector: 'app-posteos',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PosteosComponent implements OnInit {
 
-  constructor() { }
+  constructor( private InstanciaServicio: DatosService) { }
 
   ngOnInit(): void {
+
+    this.InstanciaServicio.ObtenerData().subscribe( posteos => { console.log( posteos )})
+
   }
 
 }

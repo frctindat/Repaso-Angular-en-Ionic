@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { MenuComponent } from './Componentes/menu/menu.component';
 import { PaginasModule } from './paginas.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PaginasModule } from './paginas.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PaginasModule
+    PaginasModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
