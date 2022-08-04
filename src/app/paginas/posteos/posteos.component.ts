@@ -10,9 +10,15 @@ export class PosteosComponent implements OnInit {
 
   constructor( private InstanciaServicio: DatosService) { }
 
+  LoQueDescargo: any[] = [];
+
   ngOnInit(): void {
 
-    this.InstanciaServicio.ObtenerData().subscribe( posteos => { console.log( posteos )})
+    this.InstanciaServicio.ObtenerData()
+        .subscribe( ( posteos: any ) => {
+          console.log( posteos );
+          this.LoQueDescargo = posteos;
+        });
 
   }
 

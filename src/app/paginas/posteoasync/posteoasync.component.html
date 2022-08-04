@@ -1,10 +1,10 @@
 
 <br>
-<h1> Posteos a lo pavote </h1>
+<h1> Posteos como corresponde </h1>
 <br>
 
 <ul class="list-group">
-  <li *ngFor="let UnPost of LoQueDescargo " class="list-group-item">
+  <li *ngFor="let UnPost of DescargaAsync | async" class="list-group-item">
     <h2> {{ UnPost.title }} </h2>
     <p> {{ UnPost.body }} </p>
   </li>
