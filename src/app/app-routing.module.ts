@@ -27,6 +27,10 @@ const routes: Routes = [
     loadChildren: () => import('./paginas/posteoasync/posteoasync.module').then(m => m.PosteoasyncModule )
   },
   {
+    path:'PosteoConImput',
+    loadChildren: () => import('./paginas/posteo-con-input/posteo-con-input.module').then(m => m.PosteoConInputModule )
+  },
+  {
     path: '**',
     redirectTo: 'Home'
   }
