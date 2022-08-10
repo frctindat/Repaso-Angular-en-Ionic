@@ -4,5 +4,9 @@
 <br>
 
 <li>
-  <app-cada-posteo *ngFor="let UnPost of DescargaConInput | async" [UnPost]="UnPost"></app-cada-posteo>
+  <app-cada-posteo
+    *ngFor="let UnPostDeLaLista of DescargaConInput | async"
+        [UnPostRecibidoDelPadre]="UnPostDeLaLista"
+        (ElPostClickeadoEnElHijo)="ReciboClick( $event )">
+  </app-cada-posteo>
 </li>

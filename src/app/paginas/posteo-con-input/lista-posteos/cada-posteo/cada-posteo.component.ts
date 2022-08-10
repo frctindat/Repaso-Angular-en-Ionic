@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-cada-posteo',
@@ -7,11 +7,17 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CadaPosteoComponent implements OnInit {
 
-  @Input() UnPost: any;
+  @Input() UnPostRecibidoDelPadre: any;
+  @Output() ElPostClickeadoEnElHijo = new EventEmitter<number>();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  AlHacerClick() {
+    console.log( 'El Id del post desde el hijo es ', this.UnPostRecibidoDelPadre.id );
+    this.ElPostClickeadoEnElHijo.emit( this.UnPostRecibidoDelPadre.id );
   }
 
 }

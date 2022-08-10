@@ -16,4 +16,8 @@ export class ListaPosteosComponent implements OnInit {
     this.DescargaConInput = this.InstanciaConInput.ObtenerData();
   }
 
+  ReciboClick(IdDelPosteoRecibidoDelHijo: number) {
+      console.log('EL ID DEL POSTEO RECIBIDO EN EL PADRE ES ', IdDelPosteoRecibidoDelHijo);
+  }
+
 }
